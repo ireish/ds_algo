@@ -4,11 +4,14 @@
 using namespace std;
 
 bool is_array_sorted(int n, vector<int> A) {
-    
-    if(n==0 || n==1) return 1;
-    
-    if(A[n-1] < A[n-2]) return false;
 
+    // If array size is 0 or 1, its already sorted;    
+    if(n==0 || n==1) return 1;
+
+    // Starting from (n-1)th index, check if current value
+    // is greater than its previous or not;
+    if(A[n-1] < A[n-2]) return false;
+    
     return is_array_sorted(n-1, A);
 }
 
