@@ -5,8 +5,11 @@ using namespace std;
 // Try solving this first; i = 0 (starting idx);
 int last_occ(vector<int> arr, int n, int key, int i) {
     if(i == n) return -1;
-    
+
+    // Keep iterating till last index;
     int last_idx = last_occ(arr, n, key, i+1);
+
+    // Will not return -1 if key found in last_idx;
     if(last_idx != -1) {
         return last_idx;
     }
