@@ -12,6 +12,13 @@ void print_n(int n) {
     cout<<n<<" ";
 }
 
+void print_till_one(int n) {
+    if(n == 0) return;
+    
+    cout<<n<<" ";
+    print_till_one(n-1);
+}
+
 int main() {
 
     int n;
@@ -20,6 +27,8 @@ int main() {
     cin>>n;
     
     print_n(n);
+    cout<<"\n";
+    print_till_one(n);
 
     return 0;
 }
