@@ -23,7 +23,7 @@ void sort_rec(vector<int> &vec) {
     int elem = vec.back();
     vec.pop_back();
 
-    // Recursive calling this func. 
+    // Calling this func. recursively
     // with one element (last) less
     sort_rec(vec);
     
