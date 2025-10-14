@@ -61,7 +61,7 @@ def calcEquation(self, equations: List[List[str]], values: List[float], queries:
             wt = pair[1]
             
             if node not in visited:
-                _DFS(node, target, visited, product * wt, ans)
+                _DFS(node, target, visited, product * wt, query_ans)
 
 
     for i, query in enumerate(queries):
@@ -76,7 +76,7 @@ def calcEquation(self, equations: List[List[str]], values: List[float], queries:
 
         _DFS(u, v, visited, 1.0, query_ans)
 
-        result[i] = res[0]
+        result[i] = query_ans[0]
 
 
     return result
