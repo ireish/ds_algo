@@ -46,7 +46,8 @@ def wordPattern(self, pattern: str, s: str) -> bool:
 
             if word_list[i] in word_to_pattern and word_to_pattern[ word_list[i] ] != pattern[i]:
                 return False
-
+            
+            # create a bidirectional mapping between pattern and word
             pattern_to_word[pattern[i]] = word_list[i]
             word_to_pattern[word_list[i]] = pattern[i]
 
