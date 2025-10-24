@@ -15,6 +15,7 @@ Explanation:
 22 is numerically balanced since:
 - The digit 2 occurs 2 times. 
 It is also the smallest numerically balanced number strictly greater than 1.
+
 Example 2:
 
 Input: n = 1000
@@ -26,16 +27,6 @@ Explanation:
 - The digit 3 occurs 3 times. 
 It is also the smallest numerically balanced number strictly greater than 1000.
 Note that 1022 cannot be the answer because 0 appeared more than 0 times.
-Example 3:
-
-Input: n = 3000
-Output: 3133
-Explanation: 
-3133 is numerically balanced since:
-- The digit 1 occurs 1 time.
-- The digit 3 occurs 3 times.
-It is also the smallest numerically balanced number strictly greater than 3000.
-
 """
 
 # Try with generate-all-unique-permutations method
