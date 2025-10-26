@@ -39,15 +39,12 @@ class Bank:
         
 
     def transfer(self, account1: int, account2: int, money: int) -> bool:
-        account1_idx = account1 - 1
-        account2_idx = account2 - 1
-        num_accounts = len(self.balance)
 
         if not self._is_valid_account(account1) or not self._is_valid_account(account2) or self.balance[account1_idx] < money:
             return False
 
-        self.balance[account1_idx] -= money
-        self.balance[account2_idx] += money
+        self.balance[account1 - 1] -= money
+        self.balance[account2 - 1] += money
         
         return True
         
