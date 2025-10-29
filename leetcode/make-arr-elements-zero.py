@@ -84,3 +84,37 @@ def countValidSelections(self, nums: List[int]) -> int:
                 result += 1
     
     return result
+
+    
+    
+## Optimized solution : O (N)
+def countValidSelections(self, nums: List[int]) -> int:
+
+    n = len(nums)
+    left_sum = [0] * n
+     right_sum = [0] * n
+
+    l_sum = 0
+    r_sum  = 0
+    result = 0
+
+    # Calculate the left and right sum arrays
+    for i, elem in enumerate(nums):
+        l_sum += elem
+        left_sum[i] = l_sum
+
+        r_sum += nums[n - i - 1]
+        right_sum[n - i - 1] = r_sum
+
+    for i, elem in enumerate(nums):
+        
+        if elem == 0:
+            # If the absolute difference between the left and right sum is 1, 
+            # then there is only 1 valid direction to move in (towards the side with the larger sum).
+            if abs( left_sum[i] - right_sum[i] ) == 1:
+                result += 1
+
+            elif left_sum[i] == right_sum[i]:
+                result += 2
+
+    return result
