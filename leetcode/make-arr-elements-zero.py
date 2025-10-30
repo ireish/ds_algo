@@ -92,7 +92,7 @@ def countValidSelections(self, nums: List[int]) -> int:
 
     n = len(nums)
     left_sum = [0] * n
-     right_sum = [0] * n
+    right_sum = [0] * n
 
     l_sum = 0
     r_sum  = 0
